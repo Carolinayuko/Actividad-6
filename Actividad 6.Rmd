@@ -1,0 +1,66 @@
+---
+title: "Actividad 6"
+author: "Carolina  Rodriguez"
+date: "April 12, 2018"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r,,message=FALSE}
+library(tidyverse)
+```
+
+##Ejercicio 2
+
+
+_1. Seleccionar el conjunto de autos del 2008 que tienen `hwy` mayor a 31. ¿Cuantos autos son?_
+
+```{r}
+
+filter(mpg,hwy>31 & year==2008)
+
+```
+
+
+
+6 autos son del 2008 y tienen hwy mayor a 31.
+
+
+_2. Seleccionar el conjutno de autos que tienen `cty` igual a 9 ó hwy es mayor a 90. ¿Cuantos autos son?_ 
+
+```{r}
+filter(mpg,cty==9 | hwy >90 )
+```
+5 autos son los que cumplen con las dos condiciones
+
+
+_3. Selecciona la variable `displ` y `hwy`_
+
+```{r}
+select(mpg,  displ, hwy)
+```
+
+
+
+_4. Seleccioná desde la variable `trans` hasta la variable `hwy`_
+
+```{r}
+select(mpg, trans:hwy)
+```
+
+
+
+_5. Crear una nueva variable que transforme  `hwy` (millas por galón) en litros/100 km Primero tenés que saber la conversión de galones a litros y de millas a kilómetros_
+
+`1 gallón = 3.78541 litros`
+
+`1 milla = 1.60934 km `
+
+```{r}
+mutate(mpg,l_100km=100/(hwy/3.78541*1.60934)) %>% select(l_100km)
+
+```
+

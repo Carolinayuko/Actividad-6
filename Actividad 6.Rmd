@@ -25,6 +25,10 @@ filter(mpg,hwy>31 & year==2008)
 ```
 
 
+\fbox{\begin{minipage}{48em}
+Bien
+\end{minipage}}
+
 
 6 autos son del 2008 y tienen hwy mayor a 31.
 
@@ -36,14 +40,18 @@ filter(mpg,cty==9 | hwy >90 )
 ```
 5 autos son los que cumplen con las dos condiciones
 
-
+\fbox{\begin{minipage}{48em}
+Bien
+\end{minipage}}
 _3. Selecciona la variable `displ` y `hwy`_
 
 ```{r}
 select(mpg,  displ, hwy)
 ```
 
-
+\fbox{\begin{minipage}{48em}
+Bien
+\end{minipage}}
 
 _4. Seleccioná desde la variable `trans` hasta la variable `hwy`_
 
@@ -51,7 +59,9 @@ _4. Seleccioná desde la variable `trans` hasta la variable `hwy`_
 select(mpg, trans:hwy)
 ```
 
-
+\fbox{\begin{minipage}{48em}
+Bien
+\end{minipage}}
 
 _5. Crear una nueva variable que transforme  `hwy` (millas por galón) en litros/100 km Primero tenés que saber la conversión de galones a litros y de millas a kilómetros_
 
@@ -64,3 +74,11 @@ mutate(mpg,l_100km=100/(hwy/3.78541*1.60934)) %>% select(l_100km)
 
 ```
 
+\fbox{\begin{minipage}{48em}
+Bien
+\end{minipage}}
+
+
+\fbox{\begin{minipage}{48em}
+Te faltó hacer todo el ejercicio de exploración con los datos de felicidad. PUNTOS: 4/10
+\end{minipage}}
